@@ -1,0 +1,35 @@
+{
+  "name": "electron-boilerplate",
+  "version": "1.0.0",
+  "description": "A Electron boilerplate with Typescript, SASS and webpack",
+  "private": true,
+  "scripts": {
+    "start": "electron ./out/electron/index.js",
+    "build": "webpack --config webpack.website.config.js && webpack --config webpack.electron.config.js && npm run compile-css",
+    "watch": "npm run build -- --watch",
+    "compile-css": "node-sass src/scss/theme.scss out/website/theme.css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dprietob/electron-boilerplate.git"
+  },
+  "keywords": [
+    "electron",
+    "boilerplate",
+    "sass",
+    "webpack"
+  ],
+  "author": "Daniel Prieto",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^18.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "node-sass": "^7.0.1",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.6.4",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {}
+}
